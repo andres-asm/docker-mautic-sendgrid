@@ -4,4 +4,4 @@ WORKDIR /var/www/html/
 RUN COMPOSER_ALLOW_SUPERUSER=1 composer require symfony/sendgrid-mailer --no-interaction --no-progress --ignore-platform-reqs --no-scripts
 WORKDIR /var/www/html
 RUN php bin/console cache:clear
-RUN chown -R www-data:www-data /var/www/html/var
+RUN chown -Rc www-data:www-data /var/www/html/var
