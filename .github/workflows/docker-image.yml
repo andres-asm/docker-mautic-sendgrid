@@ -45,7 +45,5 @@ jobs:
             BASE_TAG=${{ env.BASE_TAG }}
           tags: |
             ${{ env.IMAGE_NAME }}:${{ env.PUSH_TAG }}
-            # Optional convenience tags:
-            # ${{ env.IMAGE_NAME }}:${{ env.BASE_TAG }}-sendgrid-${{ github.sha }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
